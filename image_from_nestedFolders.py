@@ -1,18 +1,13 @@
 from pathlib import Path
 import os
 from os import listdir
+import sys
 
-def cwp():
-    print(os.getcwd())
-   
-cwp()
-os.chdir('D:/')
-folder=cwp()
+path=""
 
+file_name = os.path.abspath(path)
 
-for images in os.listdir(folder):
- 
-    if (images.endswith(".png") or images.endswith(".jpg")
-        or images.endswith(".jpeg")):
-        print(images)
-        
+files=os.listdir(file_name)
+for images in files:
+    if (images.endswith(".png") or images.endswith(".jpg") or images.endswith(".jpeg")):
+             print(images)
